@@ -1,7 +1,10 @@
 <?php
+require_once (ROOT. '/Traits/SingletonTrait.php');
 
 class DB
 {
+    use SingletonTrait;
+
 	private $pdo;
 
 	private static $instance = null;
@@ -15,24 +18,16 @@ class DB
 		$this->pdo = new \PDO($dsn, $user, $password);
 	}
 
-	public static function getInstance()
+	public function select($sql, $value = [])
 	{
-		if (null === self::$instance) {
-			$c = __CLASS__;
-			self::$instance = new $c;
-		}
-		return self::$instance;
-	}
-
-	public function select($sql)
-	{
-		$sth = $this->pdo->query($sql);
+		$sth = $this->pdo->prepare($sql);
+        $sth->execute($value);
 		return $sth->fetchAll();
 	}
 
-	public function exec($sql)
+	public function exec($sql, $value = [])
 	{
-		return $this->pdo->exec($sql);
+		return $this->pdo->prepare($sql)->execute($value);
 	}
 
 	public function lastInsertId()
