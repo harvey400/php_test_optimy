@@ -33,6 +33,28 @@ Basic structure example:
     Comments List <----------- CommentService.php <----------- CommentRepository.php     
 
 
+---
+**NewsService.php**
+
+|Method|Description|Parameters|Return|
+|---|---|---|---|
+|list()|List all news|-|array - list of all news|
+|create()|Add a record in news table|string $title<br>string $body|int - ID created|
+|delete()|Deletes a news, and also linked comments|int $id|int - number of deleted news|
+
+
+**CommentService.php**
+
+|Method|Description|Parameters|Return|
+|---|---|---|---|
+|list()|List all comments|-|array - list of all comments|
+|listByNewsId()|List comments by news id|int $id|array - list of comments by news id|
+|create()|Create comment for news|string $body<br>int $newsId|int - ID created|
+|delete()|Deletes a comment|int $id|int - number of deleted comment|
+|deleteByNewsId()|Delete a comment by News id|int $id|int - number of deleted comment|
+
+---
+
 
 These are the list of the issue that I encountered and how I handled these bad practices/issues
 

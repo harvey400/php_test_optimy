@@ -50,11 +50,11 @@ class NewsService
 
     /**
      * Add a record in news table
-     * @param $title
-     * @param $body
+     * @param string $title
+     * @param string $body
      * @return int
      */
-	public function create($title, $body) : int
+	public function create(string $title, string $body) : int
 	{
         $data = [
             'title' => $title,
@@ -67,10 +67,10 @@ class NewsService
 
     /**
      * Deletes a news, and also linked comments
-     * @param $id
+     * @param int $id
      * @return int
      */
-	public function delete($id) : int
+	public function delete(int $id) : int
 	{
         /**
          * Delete comments based on NewsId
