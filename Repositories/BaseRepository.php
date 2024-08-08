@@ -48,7 +48,7 @@ class BaseRepository
      * @param array $data
      * @return int
      */
-    public function create($data = []) : int
+    public function create(array $data = []) : int
     {
         //Filter valid columns based on fillables
         $filteredData = $this->filterFillables($data);

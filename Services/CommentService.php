@@ -39,10 +39,10 @@ class CommentService
 
     /**
      * List comments by news id
-     * @param $id
+     * @param int $id
      * @return array
      */
-    public function listByNewsId($id) : array
+    public function listByNewsId(int $id) : array
     {
         $rows =  $this->commentRepository->listBy('news_id', $id);
 
@@ -61,11 +61,11 @@ class CommentService
 
     /**
      * Create comment for news
-     * @param $body
-     * @param $newsId
+     * @param string $body
+     * @param int $newsId
      * @return int
      */
-	public function create($body, $newsId) : int
+	public function create(string $body, int $newsId) : int
 	{
         $data = [
             'body' => $body,
@@ -78,20 +78,20 @@ class CommentService
 
     /**
      * Delete a comment
-     * @param $id
+     * @param int $id
      * @return int
      */
-	public function delete($id) : int
+	public function delete(int $id) : int
 	{
         return $this->commentRepository->delete($id);
 	}
 
     /**
      * Delete a comment by News_id
-     * @param $id
+     * @param int $id
      * @return int
      */
-    public function deleteByNewsId($id) : int
+    public function deleteByNewsId(int $id) : int
     {
         return $this->commentRepository->deleteBy('news_id', $id);
     }

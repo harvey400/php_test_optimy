@@ -37,7 +37,7 @@ class DB
      * @param array $value
      * @return bool
      */
-	public function exec($sql, $value = [])
+	public function exec($sql,array $value = [])
 	{
 		return $this->pdo->prepare($sql)->execute($value);
 	}
