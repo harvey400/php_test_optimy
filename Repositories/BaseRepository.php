@@ -3,13 +3,24 @@ require_once (ROOT . '/utils/DB.php');
 
 class BaseRepository
 {
-
+    /**
+     * @var object
+     */
     protected object $db;
 
+    /**
+     * @var string
+     */
     protected string $table;
 
+    /**
+     * @var string
+     */
     protected string $primaryKey;
 
+    /**
+     * @var array
+     */
     protected array $fillables;
 
     /**

@@ -5,10 +5,21 @@ class NewsRepository extends BaseRepository
 {
     use SingletonTrait;
 
+    /**
+     * @var object|mixed
+     */
     protected object $db;
 
+    /**
+     * Table name
+     * @var string
+     */
     protected string $table = 'news';
 
+    /**
+     * Primary key
+     * @var string
+     */
     protected string $primaryKey = 'id';
 
     /**

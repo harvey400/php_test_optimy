@@ -1,10 +1,5 @@
 <?php
-
-define('ROOT', __DIR__);
-
-require_once (ROOT . '/Traits/SingletonTrait.php');
-require_once (ROOT . '/Services/NewsService.php');
-require_once (ROOT . '/Services/CommentService.php');
+require_once (ROOT . '/autoload.php');
 
 $newsService = NewsService::getInstance();
 $commentService = CommentService::getInstance();

@@ -5,10 +5,21 @@ class CommentRepository extends BaseRepository
 {
     use SingletonTrait;
 
+    /**
+     * @var object|mixed
+     */
     protected object $db;
 
+    /**
+     * Table name
+     * @var string
+     */
     protected string $table = 'comment';
 
+    /**
+     * Primary key
+     * @var string
+     */
     protected string $primaryKey = 'id';
 
     /**
