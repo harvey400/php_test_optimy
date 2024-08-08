@@ -1,4 +1,7 @@
 <?php
+/**
+ * @author Harvey Tapang <harveytapang@gmail.com>
+ */
 
 class Comment
 {

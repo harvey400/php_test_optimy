@@ -1,4 +1,8 @@
 <?php
+/**
+ * @author Harvey Tapang <harveytapang@gmail.com>
+ */
+
 trait SingletonTrait
 {
     protected static array $_instance = array();

@@ -1,4 +1,8 @@
 <?php
+/**
+ * @author Harvey Tapang <harveytapang@gmail.com>
+ */
+
 class DB
 {
     use SingletonTrait;

@@ -1,4 +1,8 @@
 <?php
+/**
+ * @author Harvey Tapang <harveytapang@gmail.com>
+ */
+
 require_once (ROOT . '/utils/DB.php');
 
 class BaseRepository

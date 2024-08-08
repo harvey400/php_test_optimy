@@ -1,4 +1,8 @@
 <?php
+/**
+ * @author Harvey Tapang <harveytapang@gmail.com>
+ */
+
 require_once(ROOT . '/class/News.php');
 require_once(ROOT . '/Services/CommentService.php');
 require_once(ROOT . '/Repositories/NewsRepository.php');

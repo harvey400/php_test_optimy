@@ -1,4 +1,8 @@
 <?php
+/**
+ * @author Harvey Tapang <harveytapang@gmail.com>
+ */
+
 require_once (ROOT. '/Repositories/BaseRepository.php');
 
 class NewsRepository extends BaseRepository
